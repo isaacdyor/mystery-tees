@@ -3,8 +3,6 @@ name: Prisma Migrate
 on:
   push:
     branches: [main]
-    paths:
-      - "./prisma/**/*.*"
 
 jobs:
   install:
@@ -66,5 +64,9 @@ jobs:
 
       - name: Deploy Migrations
         run: npx prisma migrate deploy
+
+        
         env:
           DATABASE_URL: ${{ secrets.PROD_DATABASE_URL }}
+
+
