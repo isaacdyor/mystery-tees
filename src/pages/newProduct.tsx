@@ -52,15 +52,15 @@ const objectWithData = {
 }
 
 export default function newProduct() {
-  const handleClick = () => {
-    fetch(`${process.env.BASE_URL}shops/9551526/products.json`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${process.env.PRINTIFY_TOKEN}`
-      },
-      body: JSON.stringify(objectWithData),
-    })
-  }
+  // const handleClick = () => {
+  //   fetch(`${process.env.BASE_URL}shops/9551526/products.json`, {
+  //     method: 'POST',
+  //     headers: {
+  //       'Authorization': `Bearer ${process.env.PRINTIFY_TOKEN}`
+  //     },
+  //     body: JSON.stringify(objectWithData),
+  //   })
+  // }
 
   const imageData = {
     "file_name": "Test art work img",

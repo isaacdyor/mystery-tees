@@ -17,10 +17,10 @@ const comments = [
  
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
-    fetch(`${process.env.NEXT_PUBLIC_BASE_URL}uploads/images.json`, {
+    fetch(`${process.env.BASE_URL}uploads/images.json`, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${process.env.NEXT_PUBLIC_PRINTIFY_TOKEN}`,
+        'Authorization': `Bearer ${process.env.PRINTIFY_TOKEN}`,
       },
       body: JSON.stringify(req.body),
     })
